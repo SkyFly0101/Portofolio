@@ -1478,25 +1478,25 @@ div[style*="fixed"] span[id^="img_"][class^="img_"] > style:first-child + div[st
         <section class="contact-form">
           <h3 class="h3 form-title">Contact Form</h3>
 
-          <form action="https://formsubmit.co/alexandros20088@gmail.com" method="POST" class="form">
-            <!-- Replace 'your-email@example.com' with your actual email -->
-            <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
-            <input type="hidden" name="_captcha" value="false">
+          <form action="https://formsubmit.co/alexandros20088@gmail.com" method="POST">
+              <input type="hidden" name="_next" value="/thank-you.html">
+              <input type="hidden" name="_captcha" value="false">
 
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
-              <input type="email" name="email" class="form-input" placeholder="Email address" required>
-            </div>
+              <div class="input-wrapper">
+                  <input type="text" name="fullname" class="form-input" placeholder="Full name" required>
+                  <input type="email" name="email" class="form-input" placeholder="Email address" required>
+              </div>
 
-            <input type="text" name="subject" class="form-input" placeholder="Subject" required>
+              <input type="text" name="subject" class="form-input" placeholder="Subject" required>
+              <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
 
-            <textarea name="message" class="form-input" placeholder="Your Message" required></textarea>
-
-            <button class="form-btn" type="submit">
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
+              <button class="form-btn" type="submit">
+                  <ion-icon name="paper-plane"></ion-icon>
+                  <span>Send Message</span>
+              </button>
           </form>
+
+
         </section>
 
 
@@ -1538,6 +1538,13 @@ div[style*="fixed"] span[id^="img_"][class^="img_"] > style:first-child + div[st
 
                   
 
+  <script>
+      document.querySelector("form").addEventListener("submit", function(event) {
+          setTimeout(function() {
+              window.location.href = "/thank-you.html"; // Redirect after form submission
+          }, 500); // Short delay to ensure email is sent
+      });
+  </script>
 
 
 </body></html>
